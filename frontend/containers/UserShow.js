@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, List } from 'antd';
+import { Row, Col, Card, List, Progress } from 'antd';
 
 import PageFormat from '../components/PageFormat';
 
@@ -47,9 +47,25 @@ class UserShow extends Component {
 			return <NotFound/>;
 		}
 		return (
-			<PageFormat page="users" title={user.name}>
-				<p><b>Last Activity Date:</b> {moment(user.lastEvent).format('MMMM Do, YYYY')}</p>
-			</PageFormat>
+			<div>
+				<PageFormat page="users" title={user.name}>
+					<p><b>Last Activity Date:</b> {moment(user.lastEvent).format('MMMM Do, YYYY')}</p>
+					<Row type="flex" justify="space-between" style={{width: '100%', borderTop: '1px solid rgba(0,0,0,0.1)', paddingTop: 10}}>
+						<Col xs={8} style={{textAlign: 'center'}}>
+							<h3>Assignments Completed</h3>
+							<Progress type="dashboard" percent={10} />
+						</Col>
+						<Col xs={8} style={{textAlign: 'center'}}>
+							<h3>Some title Here</h3>
+							<Progress type="dashboard" percent={98} />
+						</Col>
+						<Col xs={8} style={{textAlign: 'center'}}>
+							<h3>Some Other Thing</h3>
+							<Progress type="dashboard" percent={100} status="success" format={() => '100%'} />
+						</Col>
+					</Row>
+				</PageFormat>
+			</div>
 		)
 	}
 }
