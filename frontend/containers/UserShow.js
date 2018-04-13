@@ -53,15 +53,21 @@ class UserShow extends Component {
 					<Row type="flex" justify="space-between" style={{width: '100%', borderTop: '1px solid rgba(0,0,0,0.1)', paddingTop: 10}}>
 						<Col xs={8} style={{textAlign: 'center'}}>
 							<h3>Assignments Completed</h3>
-							<Progress type="dashboard" percent={10} />
+							<Progress type="dashboard" percent={Math.floor(Math.random() * 100)} />
 						</Col>
 						<Col xs={8} style={{textAlign: 'center'}}>
-							<h3>Some title Here</h3>
-							<Progress type="dashboard" percent={98} />
+							<h3>Phonics Completion</h3>
+							<Progress type="dashboard" percent={Math.floor(Math.random() * 100)} />
 						</Col>
 						<Col xs={8} style={{textAlign: 'center'}}>
-							<h3>Some Other Thing</h3>
+							<h3>Rhyme a Zoo Completion</h3>
 							<Progress type="dashboard" percent={100} status="success" format={() => '100%'} />
+						</Col>
+					</Row>
+					<Row type="flex" justify="space-between" style={{width: '100%', borderTop: '1px solid rgba(0,0,0,0.1)', paddingTop: 10}}>
+						<Col xs={24}>
+							<h3>Assignments Completed</h3>
+							<Progress type="dashboard" percent={Math.floor(Math.random() * 100)} />
 						</Col>
 					</Row>
 				</PageFormat>
