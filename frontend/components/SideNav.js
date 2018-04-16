@@ -18,7 +18,7 @@ class SideNav extends Component {
 					defaultSelectedKeys={[this.props.active || 'dashboard']}
 					mode="inline"
 				>
-					<Menu.Item key="home" style={{marginTop: 20, marginBottom: 20}}><Link to="/dashboard"><h2><b>BrainyKidz</b></h2></Link></Menu.Item>
+					<Menu.Item key="home" style={{marginTop: 20, marginBottom: 20}}><Link to="/dashboard"><h2><b>Brainy Kids</b></h2></Link></Menu.Item>
 					<Menu.Item key="dashboard"><Link to="/dashboard"><Icon type="dashboard"/>Dashboard</Link></Menu.Item>
 					<Menu.Item key="users"><Link to="/users"><Icon type="user"/>Users</Link></Menu.Item>
 					<Menu.Item key="logout"><Link to="/"><Icon type="logout"/>Logout</Link></Menu.Item>
